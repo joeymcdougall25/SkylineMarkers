@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body style="margin: 10px 0px 0px 10px;">
+<div> 
+    <h6 style="font-family: Impact;font-size: 36px; margin: 0px; text-align: center;">What's Happening in Your Skyline?</h6>
+        <p style="line-height: 5px; text-align: center; color: gray; font-family: Courier New;"> By: Joey McDougall | March 8,2016 </p>
+        <p id="Intro">Anyone who has ever lived in a big city has undoubtedly looked out at the massive skyscrapers that pierce through the horizon. These buildings are a testament to mankind's desire to go bigger and better, and humanities refusal to settle for what's within reach. However, it doesn't often cross one's mind what actually goes on within these buildings. While it may not be as popular as New York City or Las Vegas, the Philadelphia remains one of America's most beloved skylines. The following photo will allow you to explore what goes one within the buildings that create Philadelphia's skyline, as well as some other fun facts along the way. <br></br><em>Enjoy!</em> 
+        </p>
+</div>
+
+<div class="container straighten">
+    <div id="popup">
+        <div class="marker" id="CityHall"></div>
+        <div class="marker" id="OneLibertyPlace"></div>
+        <div class="marker" id="TwoLibertyPlace"></div>
+        <div class="marker" id="ComcastCenter"></div>
+        <div class="marker" id="BNYMellonCenter"></div>
+        <div class="marker" id="ThreeLoganSquare"></div>
+        <img src="https://ncapad.files.wordpress.com/2015/11/philadelphia-photography.jpg" />
+            <p style="font-size: 10px; ">Photo by Bob Krist </p>
+    </div>
+</div>
+
+<div class="textbox">
+    <div class="popuptitle">Philadelphia Skyline</div>
+    The Philadelphia Skyline is made up of the following builidngs: 
+        <ul>
+            <li>One Liberty Place</li>
+            <li>Two Liberty Place</li>
+            <li>City Hall</li>
+            <li>BNY Mellon Center</li>
+            <li>Comcast Center</li>
+            <li>Three Logan Square</li>
+        </ul>
+         <p>Click on a building to learn more.</p>
+</div>
+
+
+<style>
+.container{
+    width: 60%;
+    display: inline-block;
+    position: static;
+    
+}
+.container img {    
+    width: 100%;
+    padding:0px;
+    border: 2px solid black;
+    position: static;
+}
+.textbox {
+    width: 30%;
+    height: 68.2%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 40px;
+    font-family: 'Garamond', sans-serif;
+    font-size: 18px;
+    line-height: 1.5em;
+    padding: 0px 10px 10px 5px;
+    overflow: scroll;
+    position: relative; 
+    background-color: #9BDEE7;
+    border: 2px solid black;
+    
+}
+.marker{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #89cff0;
+    border: 2px solid gray;
+    border-radius: 50%;
+    transition: background-color 1.5s ease;
+    cursor: pointer;
+}
+.marker:hover {
+    background-color: yellow;
+}
+#CityHall {
+    top:50%;
+    left: 46.5%;
+}
+#TwoLibertyPlace {
+    top:32%;
+    left: 15%;
+}
+#OneLibertyPlace {
+    top: 40%;
+    left: 36%;
+}
+#BNYMellonCenter {
+    top: 40%;
+    left: 56%;
+}
+#ComcastCenter{
+    top: 12%;
+    right: 14.5%;
+}
+#ThreeLoganSquare{
+    top: 40%;
+    right: 5%;
+}
+#Intro{
+    text-align: center; 
+    padding-left: 100px; 
+    padding-right: 150px;
+    line-height: 150%;
+    font-family: Garamond;
+    font-size: large;
+}
+.straighten:after{
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden
+}
+
+#popup {
+    position:relative;
+}
+#intro {}
+.hoverbox {
+    position:absolute; 
+    padding:0.5em; 
+    background:#0262C7; 
+    box-shadow:10px 10px 5px #FFE642; 
+    z-index:300; 
+    font-family:'Roboto', Arial, sans-serif; 
+    line-height:1.3em; 
+    min-width:100px; 
+    max-width:300px;
+    border: 5px groove gray;
+}
+.popuptitle {
+    color: #E8919B;
+    font-family:'Roboto', Arial, sans-serif;
+    letter-spacing: 0.01em;
+    font-size:18px; 
+    font-weight:700;
+    clear:both;
+}
+@media only screen and (max-width: 700px) {
+.container{
+    width: 90%
+}
+.textbox{
+    width: 90%
+}
+}
+</style>
+
+<script>
+$(document).ready(function() {
+
+var data = 
+[{"id":"CityHall","name":"City Hall <br> Height: 548 ft </br>", "description":"<p> Once required by a 'Gentleman's Agreement' to remain the tallest building in the city of Philadelphia, City Hall stands in the heart of Center City at 548 feet tall. Scottish architect John McArthur Jr. designed the building in 1871 and construction was completed in 1907; at the time it was the tallest habitable building in the world.</p><p>City Hall has almost 700 rooms within its walls, effectively making it one of the largest municipal buildings in the world. It houses all three houses of government within <ul><li>Executive Branch (Mayor's Office)</li> <li>Legislative Branch (City Council)</li> <li>Judicial Branch (Court of Common Pleas)</li></ul></p><p><strong> Fun Fact!</strong><br></br> Although the statue of William Penn atop City Hall may seem small to the naked eye, the bronze statue, created by Alexander Milne Calder, actually stands 37 feet tall and weighs 27 tons! </p>"},
+{"id":"OneLibertyPlace","name":"One Liberty Place <br> Height: 945 ft </br>", "description":"<p>Designed by Helmut Jahn in 1985, and completed in 1987, One Liberty Place stands 945 feet high, with 61 floors and nearly 1.2 million square feet; making it the second tallest skyscraper in Philadelphia. Located at 16050 Market Street, at the heart of Philadelphia's Business District, One Liberty Place is prime real estate.</p> <p>Current Tenants include:<ul> <li>Cozen O'Connor</li> <li>Chartis, White and Williams LLP</li> <li>The Glenmede Trust Company</li> <li> DLA Piper LLP, </li> <li>Morgan Stanley Smith Barney LLC</li><li> AON Insurance Company</li><li> JP Morgan Chase</li> <li>Merrill Lynch</li> </ul> </p> <p> <strong>Fun Fact!</strong> <br></br>It is well known to Philadelphians that the original plans for the city called for no building to rise higher than William Penn's hat above City Hall. However, One Liberty place was the first building to be built taller than ol' Billy Penn after a controversial ordeal in the 1980s. </p>"},
+{"id":"TwoLibertyPlace","name":"Two Liberty Place <br> Height: 848 ft </br>", "description":"<p>Completed in 1990, Two Liberty Place stands 848 feet tall with 58 floors and approximately 1.2 million square feet of space; effectively making this skyscraper roughly 100 feet shorter than its sister building. </p> <p>Similarly to One Liberty place most of the space in Two Liberty Place is used by businesses for office space. However, the top twenty floors of this skyscraper have been converted into high-end, luxury condominiums offering scenic views of Center City, Philadelphia and beyond.</p><p>Floors 48 to 53 house Two Liberty Place's Skyline Collection and these condominiums begin at $825,000. Floors 54 to 57 contain the Penthouse Collection residences and these rooms are priced at $2,000,000 minimum.</p> <p> <strong>Fun Fact!</strong><br></br> The 32nd floor of Two Liberty Place's in-house restaurant, R2L, provieds the highest vantage point of any eatery in the city.</p>"},
+{"id":"BNYMellonCenter","name":"BNY Mellon Center <br> Height: 792 ft </br>", "description":"<p>The BNY Mellon Center was built by Kohn Pederson Fox Associates in 1990 and stands 792 feet tall with 54 floors of office space. The building is part of the office complex known as Penn Center--which consists of 13 other buildings--and is sometimes referred to as Nine Penn Center.</p> <p>Some major businesses within this skyscraper include:<ul><li>Ballard Spahr LLP</li> <li> Sunoco</li> <li>Goldman Sachs</li> <li>JP Morgan Chase</li> <li>BNY Mellon</li> <li>Fidelity Investmensts</li> </ul></p> <p> The BNY Mellon Center also provides several leisure opportunities that can be found in the Philadelphia Sports Club and Cafe CoCo in the buildings concourse, and the private Pyramid Club, located on the 52nd floor, for members only. </p> <p> <strong> Fun Fact!</strong><br></br> The BNY Mellon Center was featured in the 1993 film <em> Philadelphia</em> starring Denzel Washington and Tom Hanks.</p>"},
+{"id":"ComcastCenter","name":"ComcastCenter <br> Height: 975 ft </br>", "description":"<p>The Comcast Center, designed by Robert A.M. Stern, was completed in 2008 and stands 975 feet high, with 58 floors and 1.4 million square feet of space; this skyscraper is over 130 feet taller than One Liberty Place, which earns it the title of tallest building in Philadelphia.</p><p>It does not come as a surprise that the largest tenant of the Comcast Center is, in fact, Comcast. Taking up almost 1.1 million square feet, or 89 percent, of the buildings office space. Other tenants include: <ul><li>Citizen's Bank</li> <li>TelAmerica Media Inc.</li><li>Center City Film and Video</li></ul></p><p>The Comcast Center has also become famous for its 83.3 foot wide by 25.4 feet high, 2,100 square-foot video wall that displays high-quality video at 10 million pixels of clarity for 18 hours a day. </p><p><strong> Fun Fact! </strong><br></br> The Comcast Center is not only the tallest building in Philadelphia, but it ranks as the 15th tallest building in the United States, and the 98th tallest building in the world! </p>"},
+{"id":"ThreeLoganSquare","name":"Three Logan Square <br> Height: 739 ft </br>", "description":"<p>Formerly known as the Bell Atlantic Tower, Three Logan Square stands 739 feet tall, with 55 floors and 1.3 million square feet of space. Kling Lindquist, a Philadelphia-based architect, designed the building and construction was completed in 1991; the building is mainly comprised of office space.</p> <p> The major tenants of Three Logan Square include: <ul><li> CDI Corporation</li> <li> Comcast</li> <li>Janney Montgomery Scott, LLC</li> <li>DramaFever</li> <li>Verizon</li></ul></p><p><strong> Fun Fact! </strong><br></br> There is a banquet hall known as Top of the Tower on the 51st floor of Three Logan Square that is available for weddings, and corporate and social gatherings, which provides an amazing view of Philadelphia.</p>"}];
+
+
+$(".marker").click(function(){
+    $('.textbox').empty();
+    for (var i=0; i<data.length; i++) {
+    if (this.id == data[i].id) {
+        $(".textbox").append('<div class="popuptitle">'+data[i].name+'</div>' + data[i].description);
+    } 
+    } 
+});
+
+
+var pos, thex, they;
+
+$(".marker").mouseover(function(e){
+    $(".hoverbox").remove();
+
+    // POSITIONING THE POP UP
+    if (navigator.userAgent.indexOf("Firefox")!=-1){
+        
+        pos = $("#popup").offset()
+        thex = e.pageX - pos.left + 10;
+        they = e.pageY - pos.top + 0;
+        if (thex > $("#popup").width() - 150) { thex = $("#popup").width() - 150 };
+        if (they > $("#popup").height() - 100) { they = $("#popup").height() - 100 };
+    } else {
+
+        pos = $("#popup").offset()
+        thex = event.pageX - pos.left + 10;
+        they = event.pageY - pos.top + 0;
+        if (thex > $("#popup").width() - 150) { thex = $("#popup").width() - 150 };
+        if (they > $("#popup").height() - 100) { they = $("#popup").height() - 100 };
+    }
+
+    // APPENDING TEXT TO THE POP UP
+    for (var i=0; i<data.length; i++) {
+    if (this.id == data[i].id) {
+    $("#popup").append('<div class="hoverbox" style="top:'+they+'px; left:'+thex+'px;"><div class="popuptitle">'+data[i].name+'</div></div>');
+    } 
+    
+
+    }   
+});
+
+$(".marker").mouseleave(function(){
+    $(".hoverbox").remove();
+});
+
+
+});//doc ready
+</script>
+
+</body>
+</html>
